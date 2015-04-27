@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="editableItems">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Weather Map App</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+	<div ng-controller = "ContactsCtrl"> 
+		<h2>Contacts</h2>
+		<ul> 
+		<li ng-repeat = "contact in contacts"> 
+			<edit-in-place value="contact.name"></edit-in-place>
+		</li>
+		</ul>
+
+		<li ng-repeat="contact in contacts">
+            {{contact.name}}
+        </li>
+	</div>
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="scripts/editableItemApp.js"></script>
+</body>
+</html>
